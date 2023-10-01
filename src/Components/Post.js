@@ -7,27 +7,15 @@ import {fetchPost} from "../redux/actions/postActions";
 const Post = () => {
 
     const {loader, data, error} = useSelector(state => state);
+    console.log("Place 7", data)
 
     const dispatch = useDispatch();
 
     useEffect(()=>{
-        // dispatch(fetchPostRequestStarted()); 
-              // dispatching action
-              // dispatch({type: "FETCH_POST_REQUEST_STARTED"});
-              
-        //  async function getPosts(){
-        //     try{
-        //        const posts =  await axios.get("https://gauravgitacc.github.io/postAppData/posts.json")
-        //        dispatch(fetchPostSuccess(posts.data));
-        //     }
-        //     catch(err){
-        //         dispatch(fetchPostFailure(err.message));
-        //     }
-        // }
-
-        // getPosts();
-
+        
+        console.log("Place 1")
         dispatch(fetchPost());
+        console.log("Place 2")
            
         
         
@@ -51,3 +39,21 @@ const Post = () => {
 }
 
 export default Post;
+
+
+
+// dispatch(fetchPostRequestStarted()); 
+              // dispatching action
+              // dispatch({type: "FETCH_POST_REQUEST_STARTED"});
+              
+        //  async function getPosts(){
+        //     try{
+        //        const posts =  await axios.get("https://gauravgitacc.github.io/postAppData/posts.json")
+        //        dispatch(fetchPostSuccess(posts.data));
+        //     }
+        //     catch(err){
+        //         dispatch(fetchPostFailure(err.message));
+        //     }
+        // }
+
+        // getPosts();
